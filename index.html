@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Data Science & Insurance Risk Analytics Conference 2025 | KNUST
+    </title>
+    <meta name="description" content="Join th />
+    <meta
+      name="keywords"
+      content="data science, insurance, risk analytics, actuarial science, KNUST, Ghana, conference 2025, predictive analytics"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Data Science & Insurance Risk Analytics Conference 2025 | KNUST"
+    />
+    <meta
+      property="og:description"
+      content="Join the Data Science and Insurance Risk Analytics Conference 2025 at KNUST, Ghana. October 9-10, 2025. Transforming risk and resilience through predictive analytics."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/partners-logos.png" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="https://www.knust.edu.gh/sites/default/files/2020-11/knust_logo_0.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["Poppins", "system-ui", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom Styles (from v1) -->
+    <style>
+      /* Apply fonts globally */
+      body {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", system-ui, -apple-system, sans-serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      :root {
+        --primary: 199 84% 12%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 199 20% 88%;
+        --accent: 42 87% 55%;
+        --muted: 199 15% 92%;
+        --muted-foreground: 199 16% 46%;
+        --card: 0 0% 100%;
+        --border: 199 31% 91%;
+      }
+      .bg-gradient-primary {
+        background: linear-gradient(135deg, hsl(199 84% 12%), hsl(199 70% 20%));
+      }
+      .bg-gradient-secondary {
+        background: linear-gradient(135deg, hsl(199 20% 95%), hsl(0 0% 100%));
+      }
+      .bg-gradient-accent {
+        background: linear-gradient(135deg, hsl(42 87% 55%), hsl(38 85% 62%));
+      }
+
+      /* Hero Background Styles */
+      .hero-bg {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.4)
+          ),
+          url("assets/knust hero.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* Enhanced text shadows for hero */
+      .text-shadow-strong {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .text-shadow-medium {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+      }
+      .shadow-elegant {
+        box-shadow: 0 10px 25px -5px hsl(199 84% 12% / 0.1);
+      }
+      .shadow-card {
+        box-shadow: 0 4px 6px -1px hsl(199 84% 12% / 0.1);
+      }
+      .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .pattern-bg {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      .text-primary {
+        color: hsl(var(--primary));
+      }
+      .text-primary-foreground {
+        color: hsl(var(--primary-foreground));
+      }
+      .text-accent {
+        color: hsl(var(--accent));
+      }
+      .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+      }
+      .bg-primary {
+        background-color: hsl(var(--primary));
+      }
+      .bg-accent {
+        background-color: hsl(var(--accent));
+      }
+      .bg-card {
+        background-color: hsl(var(--card));
+      }
+      .bg-muted {
+        background-color: hsl(var(--muted));
+      }
+      .border-accent {
+        border-color: hsl(var(--accent));
+      }
+      .border-border {
+        border-color: hsl(var(--border));
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Urgent Alert Banner -->
+    <div
+      class="bg-red-600 text-white py-2 px-4 text-center text-sm font-medium"
+    >
+      ⚠️ <strong>Abstract Deadline:</strong> September 10, 2025 |
+      <strong>Registration Deadline:</strong> September 20, 2025 |
+      <a href="#registration" class="underline hover:no-underline"
+        >Register Now!</a
+      >
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('assets/knust hero.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      "
+    >
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-5xl mx-auto fade-in">
+          <div class="mb-6">
+            <div class="flex items-center justify-center gap-4 mb-4">
+              <img
+                src="/assets/KNUST Logo.png"
+                alt="KNUST Logo"
+                class="h-20 w-20 object-contain bg-white/10 backdrop-blur-sm rounded-full p-2"
+              />
+              <div class="text-left">
+                <p
+                  class="text-lg font-semibold text-yellow-400 mb-1 drop-shadow-lg"
+                >
+                  Kwame Nkrumah University of Science and Technology
+                </p>
+                <p class="text-white/95 text-sm font-medium drop-shadow-md">
+                  Department of Statistics and Actuarial Science
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Conference Title -->
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-2xl"
+          >
+            Data Science &
+            <span class="text-yellow-400">Insurance Risk Analytics</span>
+            <br />Conference 2025
+          </h1>
+
+          <!-- Conference Theme -->
+          <div
+            class="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 border border-white/20"
+          >
+            <p
+              class="text-xl md:text-2xl text-white font-medium leading-relaxed"
+            >
+              <span class="text-yellow-400 font-bold">Theme:</span>
+              Transforming Risk and Resilience: Predictive Analytics in the
+              Future of Actuarial Science and Statistics
+            </p>
+          </div>
+          <!-- Event Details Cards -->
+          <div class="grid md:grid-cols-3 gap-6 mb-10 max-w-4xl mx-auto">
+            <div
+              class="flex items-center justify-center gap-3 bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 transition-smooth"
+            >
+              <i data-lucide="calendar" class="text-yellow-400 w-6 h-6"></i>
+              <div class="text-left">
+                <p class="font-bold text-white">Date</p>
+                <p class="text-sm text-white/90 font-medium">
+                  9th - 10th October 2025
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 transition-smooth"
+            >
+              <i data-lucide="map-pin" class="text-yellow-400 w-6 h-6"></i>
+              <div class="text-left">
+                <p class="font-bold text-white">Venue</p>
+                <p class="text-sm text-white/90 font-medium">
+                  Allotey Auditorium
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-center gap-3 bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 transition-smooth"
+            >
+              <i data-lucide="clock" class="text-yellow-400 w-6 h-6"></i>
+              <div class="text-left">
+                <p class="font-bold text-white">Duration</p>
+                <p class="text-sm text-white/90 font-medium">2 Days</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://forms.gle/CRYn5eTBtL69tYXQ9"
+              target="_blank"
+              class="bg-yellow-500 hover:bg-yellow-400 text-black font-bold px-10 py-4 text-lg rounded-xl transition-smooth inline-block shadow-2xl hover:scale-105 transform"
+            >
+              🎫 Register Now
+            </a>
+            <a
+              href="https://forms.gle/75UtBLE6dMS2DBGF9"
+              target="_blank"
+              class="border-3 border-white bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-black font-bold px-10 py-4 text-lg rounded-xl transition-smooth inline-block shadow-2xl hover:scale-105 transform"
+            >
+              📝 Submit Abstract
+            </a>
+          </div>
+
+          <!-- Countdown Timer Placeholder -->
+          <div class="mt-8 mb-12">
+            <div
+              class="countdown-timer bg-black/30 backdrop-blur-md rounded-xl p-4 max-w-md mx-auto border border-white/20"
+            >
+              <!-- JavaScript will populate this -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (from v1) -->
+    <section id="about" class="py-20 bg-gradient-secondary">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
+            About the Conference
+          </h2>
+          <p
+            class="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
+          >
+            Welcome to the Data Science and Insurance Risk Analytics Conference
+            2025, hosted by the Department of Statistics and Actuarial Science
+            at KNUST, Kumasi, Ghana. Join us at the College of Science for an
+            engaging event featuring keynote presentations, oral & poster
+            presentations and networking opportunities.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth rounded-lg p-6 text-center fade-in scale-in"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="trending-up" class="text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-3">
+              Cutting-Edge Analytics
+            </h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Explore the latest predictive analytics methodologies transforming
+              risk assessment
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth rounded-lg p-6 text-center fade-in scale-in"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="users" class="text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-3">
+              Expert Networking
+            </h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Connect with leading professionals, researchers, and academics in
+              the field
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth rounded-lg p-6 text-center fade-in scale-in"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="globe" class="text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-3">
+              Global Perspectives
+            </h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              International insights on emerging trends in actuarial science and
+              statistics
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth rounded-lg p-6 text-center fade-in scale-in"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-gradient-accent rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="target" class="text-primary"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-primary mb-3">
+              Future-Focused
+            </h3>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              Shape the future of risk management and insurance analytics
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-elegant fade-in">
+          <h3 class="text-2xl font-bold text-primary mb-6 text-center">
+            Conference Theme
+          </h3>
+          <blockquote
+            class="text-lg text-center text-muted-foreground italic leading-relaxed max-w-3xl mx-auto"
+          >
+            "Transforming risk and resilience: predictive analytics in the
+            future of actuarial science and statistics"
+          </blockquote>
+          <p class="text-center text-muted-foreground mt-6 max-w-4xl mx-auto">
+            We invite experts and leaders in Statistics and Actuarial Science
+            from across the world to present the newest and most impactful
+            developments in the field. Join us as we turn risk into
+            opportunities!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thematic Areas (from v1) -->
+    <section id="themes" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
+            Thematic Areas
+          </h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Explore cutting-edge research and innovations across five key areas
+            of focus
+          </p>
+        </div>
+        <div
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12"
+        >
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border border-gray-200 hover:border-yellow-300 rounded-lg p-8 fade-in"
+          >
+            <div
+              class="w-16 h-16 mb-6 bg-gradient-primary rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="brain" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 leading-tight">
+              Predictive Analytics and ML in Risk Modeling
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Machine learning applications in risk assessment and predictive
+              modeling methodologies
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border border-gray-200 hover:border-yellow-300 rounded-lg p-8 fade-in"
+          >
+            <div
+              class="w-16 h-16 mb-6 bg-gradient-primary rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="shield" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 leading-tight">
+              Risk Strategies in Finance and Insurance
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Advanced risk management strategies and frameworks for financial
+              and insurance sectors
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border border-gray-200 hover:border-yellow-300 rounded-lg p-8 fade-in"
+          >
+            <div
+              class="w-16 h-16 mb-6 bg-gradient-primary rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="bar-chart-3" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 leading-tight">
+              Big Data Analytics
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Leveraging big data technologies for enhanced risk analysis and
+              decision-making
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border border-gray-200 hover:border-yellow-300 rounded-lg p-8 fade-in"
+          >
+            <div
+              class="w-16 h-16 mb-6 bg-gradient-primary rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="heart" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 leading-tight">
+              Health, Longevity and Social Insurance Innovation
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Innovations in health insurance, longevity risk modeling, and
+              social insurance systems
+            </p>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border border-gray-200 hover:border-yellow-300 rounded-lg p-8 fade-in lg:col-span-2"
+          >
+            <div
+              class="w-16 h-16 mb-6 bg-gradient-primary rounded-lg flex items-center justify-center"
+            >
+              <i data-lucide="trending-up" class="text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-4 leading-tight">
+              Emerging Trends in Statistical, Actuarial, and Insurance Practices
+            </h3>
+            <p class="text-muted-foreground leading-relaxed">
+              Latest developments and future directions in statistical and
+              actuarial methodologies
+            </p>
+          </div>
+        </div>
+        <div class="text-center fade-in">
+          <div
+            class="bg-gradient-accent rounded-xl p-8 max-w-2xl mx-auto shadow-elegant"
+          >
+            <h3 class="text-2xl font-bold text-primary mb-4">
+              Call for Abstracts
+            </h3>
+            <p class="text-primary/80 mb-6">
+              We welcome research presentations across all thematic areas.
+              Submit your abstract and be part of shaping the future of risk
+              analytics.
+            </p>
+            <a
+              href="https://forms.gle/75UtBLE6dMS2DBGF9"
+              target="_blank"
+              class="inline-block bg-primary hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-smooth"
+              >Submit Your Abstract</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates (from v1) -->
+    <section id="dates" class="py-20 bg-gradient-secondary">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
+            Important Dates
+          </h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Mark your calendar and don't miss these crucial deadlines
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="bg-white shadow-elegant rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 fade-in"
+          >
+            <div class="bg-gradient-primary p-6 text-center">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+              >
+                <i data-lucide="presentation" class="text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Abstract Submission Deadline
+              </h3>
+              <div class="text-2xl font-bold text-white">
+                10th September 2025
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-muted-foreground text-center leading-relaxed">
+                Submit your research abstract for consideration
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-elegant rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 fade-in"
+          >
+            <div class="bg-gradient-accent p-6 text-center">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+              >
+                <i data-lucide="users" class="text-primary"></i>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-2">
+                Registration Deadline
+              </h3>
+              <div class="text-2xl font-bold text-primary">
+                20th September 2025
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-muted-foreground text-center leading-relaxed">
+                Complete your conference registration and payment
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-elegant rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 fade-in"
+          >
+            <div class="bg-gradient-primary p-6 text-center">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+              >
+                <i data-lucide="calendar" class="text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                Conference Dates
+              </h3>
+              <div class="text-2xl font-bold text-white">
+                9th - 10th October 2025
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-muted-foreground text-center leading-relaxed">
+                Two days of presentations, networking, and insights
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration (from v1) -->
+    <section id="registration" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 fade-in">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
+            Conference Registration
+          </h2>
+          <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Choose your registration category and secure your spot at this
+            transformative event
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mb-16">
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border-2 border-gray-200 rounded-lg overflow-hidden fade-in"
+          >
+            <div class="text-center p-6">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center"
+              >
+                <i data-lucide="graduation-cap" class="text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold text-primary mb-2">
+                Ghanaian Students
+              </h3>
+              <div class="text-3xl font-bold text-primary">GHc 300</div>
+              <p class="text-sm text-muted-foreground mt-4">
+                Full-time students from Ghanaian institutions
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-gradient-accent text-primary shadow-card hover:shadow-elegant transition-smooth border-2 border-accent rounded-lg overflow-hidden fade-in"
+          >
+            <div class="text-center p-6">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center"
+              >
+                <i data-lucide="globe" class="text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">International Students</h3>
+              <div class="text-3xl font-bold">$100</div>
+              <p class="text-sm text-primary/80 mt-4">
+                Full-time international students
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border-2 border-gray-200 rounded-lg overflow-hidden fade-in"
+          >
+            <div class="text-center p-6">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center"
+              >
+                <i data-lucide="users" class="text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold text-primary mb-2">
+                Non-International Students
+              </h3>
+              <div class="text-3xl font-bold text-primary">$200</div>
+              <p class="text-sm text-muted-foreground mt-4">
+                Postgraduate and professional participants
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white shadow-card hover:shadow-elegant transition-smooth border-2 border-gray-200 rounded-lg overflow-hidden fade-in"
+          >
+            <div class="text-center p-6">
+              <div
+                class="w-16 h-16 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center"
+              >
+                <i data-lucide="building" class="text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold text-primary mb-2">Others</h3>
+              <div class="text-3xl font-bold text-primary">GHc 600</div>
+              <p class="text-sm text-muted-foreground mt-4">
+                Industry professionals and academics
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-8 items-center fade-in">
+            <div>
+              <h3 class="text-2xl font-bold text-primary mb-6">
+                What's Included
+              </h3>
+              <ul class="space-y-3">
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Access to all conference sessions</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Keynote presentations from experts</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Networking opportunities</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Conference materials and resources</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Certificate of attendance</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <div
+                    class="w-6 h-6 bg-gradient-accent rounded-full flex items-center justify-center flex-shrink-0"
+                  >
+                    <i data-lucide="check" class="text-primary w-4 h-4"></i>
+                  </div>
+                  <span class="text-muted-foreground"
+                    >Coffee breaks and refreshments</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="bg-gradient-primary rounded-xl p-8 text-center text-white"
+            >
+              <h3 class="text-2xl font-bold mb-4">Ready to Register?</h3>
+              <p class="mb-6 text-white/90">
+                Secure your spot today and join leading experts in data science
+                and insurance risk analytics.
+              </p>
+              <a
+                href="https://forms.gle/CRYn5eTBtL69tYXQ9"
+                target="_blank"
+                class="bg-accent hover:bg-yellow-500 text-primary font-semibold px-8 py-4 w-full inline-block rounded-lg transition-smooth"
+                >Register Now</a
+              >
+              <p class="text-sm text-white/70 mt-3">
+                Registration closes on 20th September 2025
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action (from v1) -->
+    <section class="py-20 bg-gradient-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Turn Risk Into <span class="text-accent">Opportunities</span>
+          </h2>
+          <p class="text-xl text-white/90 mb-12 leading-relaxed">
+            Don't miss this exceptional opportunity to connect with global
+            experts, explore cutting-edge research, and shape the future of risk
+            analytics and actuarial science.
+          </p>
+          <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+            >
+              <i
+                data-lucide="file-text"
+                class="w-12 h-12 text-accent mx-auto mb-4"
+              ></i>
+              <h3 class="text-2xl font-bold mb-4">Submit Your Research</h3>
+              <p class="text-white/80 mb-6 leading-relaxed">
+                Share your innovative research and contribute to advancing the
+                field of data science and insurance risk analytics.
+              </p>
+              <a
+                href="https://forms.gle/75UtBLE6dMS2DBGF9"
+                target="_blank"
+                class="border-2 border-accent text-accent hover:bg-accent hover:text-primary font-semibold w-full inline-block py-3 px-6 rounded-lg transition-smooth"
+                >Submit Abstract →</a
+              >
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+            >
+              <i
+                data-lucide="users"
+                class="w-12 h-12 text-accent mx-auto mb-4"
+              ></i>
+              <h3 class="text-2xl font-bold mb-4">Join the Community</h3>
+              <p class="text-white/80 mb-6 leading-relaxed">
+                Register now and become part of a vibrant community of
+                professionals transforming the landscape of risk management.
+              </p>
+              <a
+                href="https://forms.gle/CRYn5eTBtL69tYXQ9"
+                target="_blank"
+                class="bg-accent hover:bg-yellow-500 text-primary font-semibold w-full inline-block py-3 px-6 rounded-lg transition-smooth"
+                >Register Today →</a
+              >
+            </div>
+          </div>
+          <div
+            class="mt-12 p-6 bg-yellow-500/20 rounded-xl border border-yellow-500/30 backdrop-blur-sm"
+          >
+            <p class="text-lg font-semibold text-accent mb-2">
+              Important Reminders
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm text-white/80">
+              <div>
+                📝 Abstract Deadline: <strong>10th September 2025</strong>
+              </div>
+              <div>
+                🎫 Registration Deadline: <strong>20th September 2025</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners / Sponsors -->
+    <section id="partners" class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-8 fade-in">
+          <h3 class="text-lg font-semibold text-gray-600 mb-4">
+            Partners & Sponsors
+          </h3>
+        </div>
+
+        <div
+          class="flex items-center justify-center gap-8 max-w-2xl mx-auto fade-in"
+        >
+          <img
+            src="assets/partners/GIA.png"
+            alt="GIA - Ghana Insurance Association"
+            class="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+          />
+          <img
+            src="assets/partners/hurisoft.png"
+            alt="Hurisoft"
+            class="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-white/90 text-sm text-center md:text-left">
+            © 2025 Department of Statistics and Actuarial Science, KNUST. All
+            rights reserved.
+          </p>
+          <p
+            class="text-yellow-400 text-sm font-semibold italic text-center md:text-right"
+          >
+            "Transforming Risk Into Opportunities"
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
