@@ -1,11 +1,8 @@
-// v1 interactions: icons init, smooth scroll, reveal, link spinner
 (function () {
-  // Initialize Lucide icons if available
   if (window.lucide && typeof window.lucide.createIcons === "function") {
     window.lucide.createIcons();
   }
 
-  // Countdown Timer for Conference
   function initCountdown() {
     const conferenceDate = new Date("October 9, 2025 09:00:00").getTime();
     const abstractDeadline = new Date("September 10, 2025 23:59:59").getTime();
@@ -18,7 +15,6 @@
       let targetDate = conferenceDate;
       let countdownLabel = "Conference starts in:";
 
-      // Check which deadline is most relevant
       if (now < abstractDeadline) {
         targetDate = abstractDeadline;
         countdownLabel = "Abstract deadline in:";
@@ -37,7 +33,6 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Try to find countdown elements and update them
         const countdownElements = document.querySelectorAll(".countdown-timer");
         countdownElements.forEach((element) => {
           element.innerHTML = `
@@ -67,12 +62,10 @@
       }
     }
 
-    // Update countdown immediately and then every second
     updateCountdown();
     setInterval(updateCountdown, 1000);
   }
 
-  // Smooth anchor scrolling
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -84,7 +77,6 @@
     });
   });
 
-  // Reveal .fade-in elements on scroll
   const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -95,12 +87,14 @@
     document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
   }
 
-  // Minor UX touches
   document.addEventListener("DOMContentLoaded", function () {
-    // Initialize countdown timer
+    if (typeof initCountdown === "function") {
+      try {
+        initCountdown();
+      } catch {}
+    }
     initCountdown();
 
-    // Add spinner to Google Forms links on click
     document
       .querySelectorAll('a[href^="https://forms.gle"]')
       .forEach((link) => {
@@ -109,7 +103,6 @@
             ' <span class="inline-block animate-spin">⏳</span>';
         });
       });
-    // Ensure first hero block appears quickly
     const heroFirst = document.querySelector("#hero .fade-in");
     if (heroFirst) setTimeout(() => heroFirst.classList.add("visible"), 100);
   });
