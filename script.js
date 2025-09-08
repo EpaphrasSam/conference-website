@@ -125,9 +125,25 @@
     const menuBtn = document.getElementById("mobileMenuButton");
     const mobileMenu = document.getElementById("mobileMenu");
     if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener("click", function () {
+      menuBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
         mobileMenu.classList.toggle("hidden");
       });
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.classList.contains("hidden")) {
+          const withinMenu = mobileMenu.contains(e.target);
+          const withinButton = menuBtn.contains(e.target);
+          if (!withinMenu && !withinButton) mobileMenu.classList.add("hidden");
+        }
+      });
+      window.addEventListener(
+        "scroll",
+        function () {
+          if (!mobileMenu.classList.contains("hidden"))
+            mobileMenu.classList.add("hidden");
+        },
+        { passive: true }
+      );
     }
 
     const banner = document.getElementById("alertBanner");
