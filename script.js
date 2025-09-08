@@ -66,6 +66,18 @@
     setInterval(updateCountdown, 1000);
   }
 
+  function smoothScrollTo(target) {
+    if (!target) return;
+    const header = document.getElementById("siteHeader");
+    const banner = document.getElementById("alertBanner");
+    const headerHeight = header ? header.offsetHeight : 0;
+    const bannerHeight = banner ? banner.offsetHeight : 0;
+    const totalOffset = headerHeight + bannerHeight;
+    const rect = target.getBoundingClientRect();
+    const offsetTop = window.pageYOffset + rect.top - totalOffset - 8;
+    window.scrollTo({ top: offsetTop, behavior: "smooth" });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -73,7 +85,11 @@
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      smoothScrollTo(target);
+      const mobileMenu = document.getElementById("mobileMenu");
+      if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
     });
   });
 
@@ -105,5 +121,24 @@
       });
     const heroFirst = document.querySelector("#hero .fade-in");
     if (heroFirst) setTimeout(() => heroFirst.classList.add("visible"), 100);
+
+    const menuBtn = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    const banner = document.getElementById("alertBanner");
+    const header = document.getElementById("siteHeader");
+    function positionHeader() {
+      if (!header) return;
+      const bannerHeight = banner ? banner.offsetHeight : 0;
+      header.style.top = bannerHeight + "px";
+    }
+    positionHeader();
+    window.addEventListener("resize", positionHeader);
+    window.addEventListener("scroll", positionHeader, { passive: true });
   });
 })();

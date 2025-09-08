@@ -6,7 +6,10 @@
     <title>
       Data Science & Insurance Risk Analytics Conference 2025 | KNUST
     </title>
-    <meta name="description" content="Join th />
+    <meta
+      name="description"
+      content="Join the Data Science and Insurance Risk Analytics Conference 2025 at KNUST, Kumasi, Ghana. 9–10 Oct 2025. Theme: Transforming Risk and Resilience: Predictive Analytics in the Future of Actuarial Science and Statistics."
+    />
     <meta
       name="keywords"
       content="data science, insurance, risk analytics, actuarial science, KNUST, Ghana, conference 2025, predictive analytics"
@@ -22,11 +25,26 @@
       content="Join the Data Science and Insurance Risk Analytics Conference 2025 at KNUST, Ghana. October 9-10, 2025. Transforming risk and resilience through predictive analytics."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/knust hero.png" />
+    <meta property="og:image" content="assets/knust%20hero.png" />
+    <meta property="og:image:alt" content="KNUST campus hero" />
+    <meta property="og:image:type" content="image/png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="assets/knust hero.png" />
+    <meta name="theme-color" content="#0a2c3a" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Data Science & Insurance Risk Analytics Conference 2025 | KNUST"
+    />
+    <meta
+      name="twitter:description"
+      content="Join the conference at KNUST, 9–10 Oct 2025. Submit abstracts and register online."
+    />
+    <meta name="twitter:image" content="assets/knust%20hero.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -171,7 +189,8 @@
   <body class="bg-gray-50">
     <!-- Urgent Alert Banner -->
     <div
-      class="bg-red-600 text-white py-2 px-4 text-center text-sm font-medium"
+      id="alertBanner"
+      class="bg-red-600 text-white py-2 px-4 text-center text-sm font-medium sticky top-0 z-50"
     >
       ⚠️ <strong>Abstract Deadline:</strong> September 10, 2025 |
       <strong>Registration Deadline:</strong> September 20, 2025 |
@@ -179,6 +198,99 @@
         >Register Now!</a
       >
     </div>
+
+    <!-- Sticky Header -->
+    <header
+      id="siteHeader"
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a href="#hero" class="flex items-center gap-2">
+            <img
+              src="assets/KNUST Logo.png"
+              alt="KNUST Logo"
+              class="h-8 w-8 object-contain"
+            />
+          </a>
+          <nav class="hidden md:flex items-center gap-6">
+            <a
+              href="#about"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >About</a
+            >
+            <a
+              href="#themes"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >Themes</a
+            >
+            <a
+              href="#dates"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >Dates</a
+            >
+            <a
+              href="#registration"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >Registration</a
+            >
+            <a
+              href="#accommodation"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >Accommodation</a
+            >
+            <a
+              href="#partners"
+              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              >Partners</a
+            >
+          </nav>
+          <button
+            id="mobileMenuButton"
+            class="md:hidden p-2 rounded-lg border border-gray-200 text-gray-700"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <div
+        id="mobileMenu"
+        class="md:hidden hidden border-t border-gray-200 bg-white/95"
+      >
+        <div class="container mx-auto px-4 py-3 space-y-1">
+          <a
+            href="#about"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >About</a
+          >
+          <a
+            href="#themes"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >Themes</a
+          >
+          <a
+            href="#dates"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >Important Dates</a
+          >
+          <a
+            href="#registration"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >Registration</a
+          >
+          <a
+            href="#accommodation"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >Accommodation</a
+          >
+          <a
+            href="#partners"
+            class="block py-2 text-gray-800 hover:text-yellow-600"
+            >Partners</a
+          >
+        </div>
+      </div>
+    </header>
 
     <!-- Hero Section -->
     <section
@@ -203,7 +315,7 @@
           <div class="mb-6">
             <div class="flex items-center justify-center gap-4 mb-4">
               <img
-                src="favicon.ico"
+                src="assets/KNUST Logo.png"
                 alt="KNUST Logo"
                 class="h-20 w-20 object-contain bg-white/10 backdrop-blur-sm rounded-full p-2"
               />
@@ -305,7 +417,10 @@
     </section>
 
     <!-- About Section (from v1) -->
-    <section id="about" class="py-20 bg-gradient-secondary">
+    <section
+      id="about"
+      class="py-20 bg-gradient-secondary scroll-mt-24 md:scroll-mt-28"
+    >
       <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in">
           <h2
@@ -409,7 +524,7 @@
     </section>
 
     <!-- Thematic Areas (from v1) -->
-    <section id="themes" class="py-20 bg-white">
+    <section id="themes" class="py-20 bg-white scroll-mt-24 md:scroll-mt-28">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in">
           <h2
@@ -530,7 +645,10 @@
     </section>
 
     <!-- Important Dates -->
-    <section id="dates" class="py-20 bg-gradient-secondary">
+    <section
+      id="dates"
+      class="py-20 bg-gradient-secondary scroll-mt-24 md:scroll-mt-28"
+    >
       <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in">
           <h2
@@ -614,7 +732,10 @@
     </section>
 
     <!-- Registration -->
-    <section id="registration" class="py-20 bg-white">
+    <section
+      id="registration"
+      class="py-20 bg-white scroll-mt-24 md:scroll-mt-28"
+    >
       <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in">
           <h2
@@ -789,6 +910,36 @@
       </div>
     </section>
 
+    <!-- Accommodation -->
+    <section
+      id="accommodation"
+      class="py-20 bg-white scroll-mt-24 md:scroll-mt-28"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10 fade-in">
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-primary mb-6"
+          >
+            Accommodation
+          </h2>
+          <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+            On-campus guest houses are available for participants. Refer to the
+            link below for the latest details.
+          </p>
+          <p class="mt-6">
+            <a
+              href="https://elearningconference.knust.edu.gh/page/accommodation-facilities"
+              target="_blank"
+              rel="noopener"
+              class="inline-block bg-primary hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-smooth"
+            >
+              View Accommodation Details
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="py-20 bg-gradient-primary text-white">
       <div class="container mx-auto px-4 text-center">
@@ -861,7 +1012,10 @@
     </section>
 
     <!-- Partners / Sponsors -->
-    <section id="partners" class="py-12 bg-gray-50">
+    <section
+      id="partners"
+      class="py-12 bg-gray-50 scroll-mt-24 md:scroll-mt-28"
+    >
       <div class="container mx-auto px-4">
         <div class="text-center mb-8 fade-in">
           <h3 class="text-lg font-semibold text-gray-600 mb-4">
