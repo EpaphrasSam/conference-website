@@ -202,7 +202,7 @@
     <!-- Sticky Header -->
     <header
       id="siteHeader"
-      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200"
+      class="fixed top-0 left-0 right-0 z-[70] bg-transparent backdrop-blur-0 border-b border-transparent transition-all duration-300"
     >
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-16">
@@ -210,44 +210,44 @@
             <img
               src="assets/KNUST Logo.png"
               alt="KNUST Logo"
-              class="h-8 w-8 object-contain"
+              class="h-12 w-12 object-contain"
             />
           </a>
           <nav class="hidden md:flex items-center gap-6">
             <a
               href="#about"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >About</a
             >
             <a
               href="#themes"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >Themes</a
             >
             <a
               href="#dates"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >Dates</a
             >
             <a
               href="#registration"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >Registration</a
             >
             <a
               href="#accommodation"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >Accommodation</a
             >
             <a
               href="#partners"
-              class="text-sm font-medium text-gray-700 hover:text-yellow-500 transition-smooth"
+              class="text-sm font-medium text-white hover:text-yellow-400 transition-smooth"
               >Partners</a
             >
           </nav>
           <button
             id="mobileMenuButton"
-            class="md:hidden p-2 rounded-lg border border-gray-200 text-gray-700"
+            class="md:hidden p-2 rounded-lg border border-white/30 text-white"
           >
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
@@ -255,7 +255,7 @@
       </div>
       <div
         id="mobileMenu"
-        class="md:hidden hidden absolute left-0 right-0 top-full z-50 border-t border-gray-200 bg-white/95 shadow-lg"
+        class="md:hidden hidden absolute left-0 right-0 top-full z-50 border-t border-gray-200 bg-white/80 backdrop-blur-lg"
       >
         <div class="container mx-auto px-4 py-3 space-y-1">
           <a
@@ -295,7 +295,7 @@
     <!-- Hero Section -->
     <section
       id="hero"
-      class="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+      class="relative min-h-screen flex items-center justify-center text-white overflow-hidden pt-14"
       style="
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.7),

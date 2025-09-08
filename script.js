@@ -152,6 +152,70 @@
       if (!header) return;
       const bannerHeight = banner ? banner.offsetHeight : 0;
       header.style.top = bannerHeight + "px";
+      // Blend behavior inspired by reference: transparent at top, glass on scroll
+      const scrolled = window.scrollY > 0;
+      if (scrolled) {
+        header.classList.remove(
+          "bg-transparent",
+          "backdrop-blur-0",
+          "border-transparent"
+        );
+        header.classList.add(
+          "bg-white/70",
+          "backdrop-blur-lg",
+          "border-gray-100",
+          "shadow-md"
+        );
+        document.querySelectorAll("#siteHeader nav a").forEach((a) => {
+          a.classList.remove("text-white");
+          a.classList.add("text-gray-800");
+        });
+        const btn = document.getElementById("mobileMenuButton");
+        if (btn) {
+          btn.classList.remove("border-white/30", "text-white");
+          btn.classList.add("border-gray-200", "text-gray-700");
+        }
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove("bg-black/70");
+          mobileMenu.classList.add(
+            "bg-white/70",
+            "border-gray-100",
+            "shadow-md"
+          );
+          mobileMenu.classList.remove("border-gray-200");
+        }
+      } else {
+        header.classList.add(
+          "bg-transparent",
+          "backdrop-blur-0",
+          "border-transparent"
+        );
+        header.classList.remove(
+          "bg-white/70",
+          "backdrop-blur-lg",
+          "border-gray-100",
+          "shadow-md"
+        );
+        document.querySelectorAll("#siteHeader nav a").forEach((a) => {
+          a.classList.add("text-white");
+          a.classList.remove("text-gray-800");
+        });
+        const btn = document.getElementById("mobileMenuButton");
+        if (btn) {
+          btn.classList.add("border-white/30", "text-white");
+          btn.classList.remove("border-gray-200", "text-gray-700");
+        }
+        const mobileMenu = document.getElementById("mobileMenu");
+        if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+          mobileMenu.classList.remove(
+            "bg-white/70",
+            "border-gray-100",
+            "shadow-md"
+          );
+          mobileMenu.classList.add("bg-black/70");
+        }
+      }
     }
     positionHeader();
     window.addEventListener("resize", positionHeader);
