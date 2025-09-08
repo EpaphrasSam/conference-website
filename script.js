@@ -128,12 +128,17 @@
       menuBtn.addEventListener("click", function (e) {
         e.stopPropagation();
         mobileMenu.classList.toggle("hidden");
+        // Ensure header appearance matches menu state at top
+        positionHeader();
       });
       document.addEventListener("click", function (e) {
         if (!mobileMenu.classList.contains("hidden")) {
           const withinMenu = mobileMenu.contains(e.target);
           const withinButton = menuBtn.contains(e.target);
-          if (!withinMenu && !withinButton) mobileMenu.classList.add("hidden");
+          if (!withinMenu && !withinButton) {
+            mobileMenu.classList.add("hidden");
+            positionHeader();
+          }
         }
       });
       window.addEventListener(
@@ -153,7 +158,10 @@
       const bannerHeight = banner ? banner.offsetHeight : 0;
       header.style.top = bannerHeight + "px";
       // Blend behavior inspired by reference: transparent at top, glass on scroll
-      const scrolled = window.scrollY > 0;
+      const menuOpen =
+        !!document.getElementById("mobileMenu") &&
+        !document.getElementById("mobileMenu").classList.contains("hidden");
+      const scrolled = window.scrollY > 0 || menuOpen;
       if (scrolled) {
         header.classList.remove(
           "bg-transparent",
@@ -179,7 +187,7 @@
         if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
           mobileMenu.classList.remove("bg-black/70");
           mobileMenu.classList.add(
-            "bg-white/70",
+            "bg-white/95",
             "border-gray-100",
             "shadow-md"
           );
