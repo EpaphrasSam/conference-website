@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block admin or system paths if any
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://data-science-conference.netlify.app/sitemap.xml
+
+

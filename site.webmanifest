@@ -1,0 +1,16 @@
+{
+  "name": "KNUST DSIRA 2025",
+  "short_name": "DSIRA 2025",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#001F2D",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}
