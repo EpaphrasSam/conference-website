@@ -5,6 +5,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 
-Sitemap: https://data-science-conference.netlify.app/sitemap.xml
+Sitemap: https://dsira-knust.web.app/sitemap.xml
 
 

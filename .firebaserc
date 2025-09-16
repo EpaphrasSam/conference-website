@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "hurisoft-inc"
+  },
+  "targets": {
+    "hurisoft-inc": {
+      "hosting": {
+        "dsira-knust": [
+          "dsira-knust"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
