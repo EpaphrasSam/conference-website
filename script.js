@@ -5,19 +5,24 @@
 
   function initCountdown() {
     const conferenceDate = new Date("October 9, 2025 09:00:00").getTime();
-    const abstractDeadline = new Date("September 10, 2025 23:59:59").getTime();
-    const registrationDeadline = new Date(
-      "September 20, 2025 23:59:59"
-    ).getTime();
+    const abstractDeadline = new Date("October 2, 2025 23:59:59").getTime();
+    const registrationDeadline = new Date("October 2, 2025 23:59:59").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
       let targetDate = conferenceDate;
       let countdownLabel = "Conference starts in:";
 
+      // Check if both deadlines are the same
+      const deadlinesAreSame = abstractDeadline === registrationDeadline;
+
       if (now < abstractDeadline) {
         targetDate = abstractDeadline;
-        countdownLabel = "Abstract deadline in:";
+        if (deadlinesAreSame) {
+          countdownLabel = "Abstract and Registration deadline in:";
+        } else {
+          countdownLabel = "Abstract deadline in:";
+        }
       } else if (now < registrationDeadline) {
         targetDate = registrationDeadline;
         countdownLabel = "Registration closes in:";
