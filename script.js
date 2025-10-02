@@ -5,8 +5,8 @@
 
   function initCountdown() {
     const conferenceDate = new Date("October 9, 2025 09:00:00").getTime();
-    const abstractDeadline = new Date("October 2, 2025 23:59:59").getTime();
-    const registrationDeadline = new Date("October 2, 2025 23:59:59").getTime();
+    const abstractDeadline = new Date("October 7, 2025 23:59:59").getTime();
+    const registrationDeadline = new Date("October 7, 2025 23:59:59").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
